@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+
+build/*
+_build/*
+build_*
+external_repos.inc
+.ub.cfg
+*/build/*
+/*/*/env/*
