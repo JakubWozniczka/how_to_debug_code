@@ -15,4 +15,4 @@ add_executable(tests
 target_link_libraries(tests Boost::unit_test_framework Boost::log)
 target_compile_definitions(tests PUBLIC BOOST_TEST_DYN_LINK)
 enable_testing()
-add_test(test_unit tests_kuba)
+add_test(test_unit tests)

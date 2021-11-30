@@ -15,7 +15,7 @@ void moveEngines(EngineState* currState, float* currentPos, std::mutex& m)
 			{	
 				*currentPos = 0;
 			}
-			BOOST_LOG_TRIVIAL(trace) << "Kuba currentpos : " << currentPos << " "<< currState <<"\n";
+			BOOST_LOG_TRIVIAL(trace) << "moveEngines currentpos : " << currentPos << " "<< currState <<"\n";
 			std::this_thread::sleep_for(std::chrono::milliseconds(100));
 			
 		}

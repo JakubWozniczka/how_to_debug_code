@@ -21,12 +21,12 @@ class CameraMoveController
 	CameraMoveController()	
 	{
 		t= std::thread(moveEngines, &engineState, &currentPos, std::ref(m), std::ref(engine.m));
-		BOOST_LOG_TRIVIAL(trace) << "Kuba const!~!!!!!!!!!!!!!!!!!";
+		BOOST_LOG_TRIVIAL(trace) << "CameraMoveController const!~!!!!!!!!!!!!!!!!!";
 
 	}
 	~CameraMoveController()
 	{
-		BOOST_LOG_TRIVIAL(trace) << "Kuba dest";
+		BOOST_LOG_TRIVIAL(trace) << "CameraMoveController dest";
 	}
 	void MoveCamera(float pos)
 	{

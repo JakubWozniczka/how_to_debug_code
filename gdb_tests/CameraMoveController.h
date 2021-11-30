@@ -18,12 +18,12 @@ class CameraMoveController
 	CameraMoveController()	
 	{
 		t= std::thread(moveEngines, &engineState, &currentPos, std::ref(m));
-		BOOST_LOG_TRIVIAL(trace) << "Kuba const!~!!!!!!!!!!!!!!!!!";
+		BOOST_LOG_TRIVIAL(trace) << "CameraMoveController const!~!!!!!!!!!!!!!!!!!";
 
 	}
 	~CameraMoveController()
 	{
-		BOOST_LOG_TRIVIAL(trace) << "Kuba dest";
+		BOOST_LOG_TRIVIAL(trace) << "CameraMoveController dest";
 	}
 	void MoveCamera(float pos)
 	{
@@ -42,7 +42,6 @@ class CameraMoveController
 	void GoToHome()
 	{
 		std::lock_guard<std::mutex> l(m);
-		//BOOST_LOG_TRIVIAL(trace) << "Kuba currentpos : " << currentPos << " " << (int)engineState << "\n";
 		currentPos = 0;
 		engineState = EngineState::HomePosition;
 	}
