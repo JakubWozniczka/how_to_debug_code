@@ -7,8 +7,8 @@ using boost::asio::ip::tcp;
 class session
 {
 public:
-  session(boost::asio::io_service& io_service, CameraMoveController& c)
-    : socket_(io_service), controller(c)
+  session(boost::asio::io_service& io_service)
+    : socket_(io_service)
   {
   }
 
@@ -77,7 +77,7 @@ private:
   tcp::socket socket_;
   enum { max_length = 1024 };
   char data_[max_length];
-  CameraMoveController& controller;
+  CameraMoveController controller;
 };
 
 class server
@@ -93,7 +93,7 @@ public:
 private:
   void start_accept()
   {
-    session* new_session = new session(io_service_, controller);
+    session* new_session = new session(io_service_);
     acceptor_.async_accept(new_session->socket(),
         boost::bind(&server::handle_accept, this, new_session,
           boost::asio::placeholders::error));
@@ -116,6 +116,5 @@ private:
 
   boost::asio::io_service& io_service_;
   tcp::acceptor acceptor_;
-  CameraMoveController controller;
 
 };

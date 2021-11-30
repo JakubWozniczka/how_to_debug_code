@@ -11,8 +11,8 @@ def sendMsg(data):
         s.sendall(bytes(data, 'utf-8'))
 
 if __name__ == '__main__':
-    sendMsg("turn on\0")
+    sendMsg("turn on")
     time.sleep(1)
 
-    sendMsg("turn off\0")
-    sendMsg("home\0")
+    sendMsg("turn off")
+    sendMsg("home")

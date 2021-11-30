@@ -18,7 +18,7 @@ class CameraMoveController
 	CameraMoveController()	
 	{
 		t= std::thread(moveEngines, &engineState, &currentPos, std::ref(m));
-		BOOST_LOG_TRIVIAL(trace) << "CameraMoveController const!~!!!!!!!!!!!!!!!!!";
+		//BOOST_LOG_TRIVIAL(trace) << "CameraMoveController const!~!!!!!!!!!!!!!!!!!";
 
 	}
 	~CameraMoveController()
