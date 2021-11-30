@@ -1,7 +1,7 @@
 #include <boost/bind.hpp>
 #include <boost/asio.hpp>
 #include "CameraMoveController.h"
-#include <sanitizer/lsan_interface.h>
+//#include <sanitizer/lsan_interface.h>
 
 using boost::asio::ip::tcp;
 
@@ -49,7 +49,7 @@ private:
 			BOOST_LOG_TRIVIAL(trace) << "Camera go to home: " << data_ << "\n";
 		}
 
-		__lsan_do_recoverable_leak_check();
+		//__lsan_do_recoverable_leak_check();
     }
     else
     {

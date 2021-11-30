@@ -13,6 +13,5 @@ def sendMsg(data):
 if __name__ == '__main__':
     sendMsg("turn on")
     time.sleep(1)
-
     sendMsg("turn off")
     sendMsg("home")
