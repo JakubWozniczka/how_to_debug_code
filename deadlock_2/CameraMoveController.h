@@ -28,7 +28,7 @@ class CameraMoveController
 	{
 		BOOST_LOG_TRIVIAL(trace) << "CameraMoveController dest";
 	}
-	void MoveCamera(float pos)
+	void MoveCamera()
 	{
 		std::lock_guard<std::mutex> l(engine.m);
 		std::lock_guard<std::mutex> l1(m);

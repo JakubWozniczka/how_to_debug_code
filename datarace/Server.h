@@ -39,7 +39,7 @@ private:
 		}
 		else if (!std::string("turn on").compare(data_))
 		{
-			controller.MoveCamera(123);
+			controller.MoveCamera();
 			BOOST_LOG_TRIVIAL(trace) << "Camera move start: " << data_ << "\n";
 		}
 		else if (!std::string("home").compare(data_))

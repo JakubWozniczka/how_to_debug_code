@@ -17,7 +17,7 @@ class CameraMoveController
 	CameraMoveController()
 	{
 	}
-	void MoveCamera(float pos);
+	void MoveCamera();
 	void StopCamera();
 	void GoToHome();
 	EngineState GetCurrentState();

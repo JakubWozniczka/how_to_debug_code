@@ -26,7 +26,7 @@ class CameraMoveController
 		BOOST_LOG_TRIVIAL(trace) << "CameraMoveController dest";
 	}
 
-	void MoveCamera(float pos)
+		void MoveCamera()
 	{
 		if (engineState == EngineState::Stopped ||
 				engineState == EngineState::HomePosition)

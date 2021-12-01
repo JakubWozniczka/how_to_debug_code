@@ -17,7 +17,7 @@ class CameraMoveController
 	{
 		
 	}
-	void MoveCamera(float pos)
+	void MoveCamera()
 	{
 		if(engineState == EngineState::Stopped ||
 				engineState == EngineState::HomePosition)

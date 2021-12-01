@@ -25,8 +25,8 @@ BOOST_AUTO_TEST_CASE( TestForStateMachine ) {
 
 BOOST_AUTO_TEST_CASE( TestForStateMachineMoveTests ) {
 	CameraMoveController c;
-	c.MoveCamera(0.5);
+	c.MoveCamera();
 	BOOST_CHECK_EQUAL(c.GetCurrentPos(), 0.5);
-	c.MoveCamera(0.7);
+	c.MoveCamera();
 	BOOST_CHECK_EQUAL(c.GetCurrentPos(), 0.2);
 };
